@@ -3,4 +3,10 @@ Rails.application.routes.draw do
   api_guard_routes for: 'users', controller: {
     registration: 'users/registration',
   }
+
+  namespace :api do
+    namespace :v1 do
+      resources :dogs, only: [:create, :show]
+    end
+  end
 end
