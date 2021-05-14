@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Food, type: :model do
-  describe "Test validations for food model" do
-    subject { build(:food) } 
+  describe 'Test validations for food model' do
+    subject { build(:food) }
     it { should validate_presence_of(:name) }
     it { should validate_presence_of(:amount) }
     it { should validate_presence_of(:times_per_day) }
@@ -13,7 +13,7 @@ RSpec.describe Food, type: :model do
     it { should validate_numericality_of(:times_per_day).is_greater_than(0) }
   end
 
-  describe "it will test the associations" do
+  describe 'it will test the associations' do
     it { should belong_to :dog }
   end
 end

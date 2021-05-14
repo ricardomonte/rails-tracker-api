@@ -1,5 +1,4 @@
 class Api::V1::FoodsController < ApplicationController
-
   before_action :authenticate_and_set_user
 
   def index
@@ -10,7 +9,7 @@ class Api::V1::FoodsController < ApplicationController
   def create
     food = Food.create!(food_params)
     something = EndFood.new(food.amount, food.total_kilograms, food.created_at, food.times_per_day).calculate
-    render json: {somethin: something, food: food }, status: :created
+    render json: { somethin: something, food: food }, status: :created
   end
 
   private

@@ -10,7 +10,7 @@ class Api::V1::DogsController < ApplicationController
     @dog = @current_user.dogs.create!(dog_params)
     render json: @dog.as_json
   end
-  
+
   private
 
   def dog_params

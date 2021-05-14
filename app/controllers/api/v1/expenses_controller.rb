@@ -2,7 +2,7 @@ class Api::V1::ExpensesController < ApplicationController
   before_action :authenticate_and_set_user
 
   def index
-    expenses = Expense.where(user_id: current_user.id).group_by{|u| (u.created_at).strftime('%A-%d-%B')}
+    expenses = Expense.where(user_id: current_user.id).group_by { |u| (u.created_at).strftime('%A-%d-%B') }
     render json: expenses.as_json
   end
 
@@ -15,7 +15,7 @@ class Api::V1::ExpensesController < ApplicationController
     expense = Expense.find(params[:id])
     expense.destroy
   end
-  
+
   private
 
   def expense_params

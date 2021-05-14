@@ -5,9 +5,9 @@ class EndFood
     @start = start
     @tperday = tperday
   end
-  
+
   def calculate
-    food = (@totalk*1000)/(@amount * @tperday)
+    food = (@totalk * 1000) / (@amount * @tperday)
     starting = @start.to_datetime
     starting + food.days
   end
