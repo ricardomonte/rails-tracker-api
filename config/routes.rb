@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :dogs, only: [:index, :create] do
         resources :foods, only: [:index, :create, :show]
       end
+      resources :users, only: :show
       resources :expenses, only: [:index, :create, :show, :destroy]
     end
   end
