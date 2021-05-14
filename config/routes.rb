@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :dogs, only: [:create, :show] do
+      resources :dogs, only: [:index, :create] do
         resources :foods, only: [:index, :create, :show]
       end
       resources :expenses, only: [:index, :create, :show, :destroy]
