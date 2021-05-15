@@ -3,13 +3,17 @@ class Api::V1::FoodsController < ApplicationController
 
   def index
     foods = Food.all
-    render json: foods.as_json
+    render json: foods
   end
 
   def create
     food = Food.create!(food_params)
-    something = EndFood.new(food.amount, food.total_kilograms, food.created_at, food.times_per_day).calculate
-    render json: { somethin: something, food: food }, status: :created
+    render json: food, status: :created
+  end
+
+  def show
+    food = Food.find(params[:id])
+    render json: food
   end
 
   private
