@@ -22,4 +22,15 @@ RSpec.describe Api::V1::FoodsController, type: :request do
       expect(response).to have_http_status(:success)
     end
   end
+
+  describe 'Get /show' do
+    it 'should have status success' do
+      dog = create(:dog)
+      food = create(:food, dog_id: dog.id)
+      puts food
+      get "/api/v1/dogs/#{dog.id}/foods/#{food.id}",
+          :headers => @headers
+      expect(response).to have_http_status(:success)
+    end
+  end
 end
