@@ -2,13 +2,18 @@ class Api::V1::ExpensesController < ApplicationController
   before_action :authenticate_and_set_user
 
   def index
-    expenses = Expense.where(user_id: current_user.id).group_by { |u| (u.created_at).strftime('%A-%d-%B') }
-    render json: expenses.as_json
+    expenses = Expense.where(user_id: current_user.id)
+    render json: expenses
   end
 
   def create
     expense = current_user.expenses.create!(expense_params)
-    render json: expense.as_json, status: :created
+    render json: expense, status: :created
+  end
+
+  def show
+    expense = Expense.find(params[:id])
+    render json: expense
   end
 
   def destroy
