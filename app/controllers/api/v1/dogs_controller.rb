@@ -11,9 +11,30 @@ class Api::V1::DogsController < ApplicationController
     render json: @dog.as_json
   end
 
+  def show
+    dog = Dog.find(params[:id])
+    render json: dog
+  end
+
+  def update
+    dog = Dog.find(params[:id])
+    dog.update(dog_params_update)
+    render json: dog
+  end
+
+  def destroy
+    dog = Dog.find(params[:id])
+    dog.destroy
+  end
+
   private
 
   def dog_params
-    params.require(:dog).permit(:name, :breed)
+    params.require(:dog).permit(:name, :breed, :kilograms)
   end
+
+  def dog_params_update
+    params.require(:dog).permit(:regular_play_time, :id)
+  end
+  
 end
