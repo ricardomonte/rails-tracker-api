@@ -6,7 +6,12 @@ module Users
       init_resource(sign_up_params)
       if resource.save
         create_token_and_set_header(resource, resource_name)
-        render_success(message: I18n.t('api_guard.registration.signed_up'))
+        user_success = {
+          user: resource,
+          message: I18n.t('api_guard.registration.signed_up')
+        }
+        # render_success( @decoded_token)
+        render json: user_success
       else
         render_error(422, object: resource)
       end
@@ -24,3 +29,5 @@ module Users
     end
   end
 end
+
+# message: I18n.t('api_guard.registration.signed_up'
