@@ -2,7 +2,7 @@ class Api::V1::ExpensesController < ApplicationController
   before_action :authenticate_and_set_user
 
   def index
-    expenses = Expense.where(user_id: current_user.id)
+    expenses = Expense.where(user_id: current_user.id).order(date_payment: :asc)
     render json: expenses
   end
 
@@ -24,6 +24,6 @@ class Api::V1::ExpensesController < ApplicationController
   private
 
   def expense_params
-    params.permit(:category, :detail, :amount)
+    params.permit(:category, :detail, :amount, :date_payment)
   end
 end
