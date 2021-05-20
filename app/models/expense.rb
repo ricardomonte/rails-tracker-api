@@ -1,7 +1,7 @@
 class Expense < ApplicationRecord
   belongs_to :user
 
-  validates_presence_of :category, :detail, :amount, :user_id
+  validates_presence_of :category, :detail, :amount, :user_id, :date_payment
 
   def as_json(options = nil)
     hash = super()
@@ -14,15 +14,15 @@ class Expense < ApplicationRecord
   private
 
   def expense_day
-    day = self.created_at.strftime('%-d')
+    day = self.date_payment.strftime('%-d')
     return day
   end
   def expense_month
-    day = self.created_at.strftime('%-m')
+    day = self.date_payment.strftime('%-m')
     return day
   end
   def expense_year
-    day = self.created_at.strftime('%Y')
+    day = self.date_payment.strftime('%Y')
     return day
   end
 
