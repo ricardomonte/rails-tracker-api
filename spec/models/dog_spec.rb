@@ -9,6 +9,6 @@ RSpec.describe Dog, type: :model do
   end
 
   describe 'it will test the associations' do
-    it { should have_many :foods }
+    it { should have_many :playhours }
   end
 end
