@@ -27,6 +27,11 @@ class Api::V1::DogsController < ApplicationController
     dog.destroy
   end
 
+  def myhours
+    hour = Playhour.where(dog_id: params[:dog_id])
+    render json: hour
+  end
+
   private
 
   def dog_params
