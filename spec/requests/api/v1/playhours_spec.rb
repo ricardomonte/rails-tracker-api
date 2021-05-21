@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::PlayhoursController, type: :request do
+  Apipie.record('examples')
   before(:all) do
     my_token = jwt_and_refresh_token(create(:user), 'user')
     @headers = { 'Authorization' => "Bearer #{my_token[0]}"}

@@ -1,4 +1,5 @@
 class Api::V1::UsersController < ApplicationController
+  include Api::V1::UsersControllerDoc
   before_action :authenticate_and_set_user
   
   def show

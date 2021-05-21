@@ -1,12 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::ExpensesController, type: :request do
+  Apipie.record('examples')
   before(:all) do
     my_token = jwt_and_refresh_token(create(:user), 'user')
     @headers = { 'Authorization' => "Bearer #{my_token[0]}"}
   end
   describe 'GET /index' do
     it 'should have status success' do
+      expense = create(:expense)
       get "/api/v1/expenses", :headers => @headers
       expect(response).to have_http_status(:success)
     end

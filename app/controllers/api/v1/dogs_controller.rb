@@ -1,4 +1,5 @@
 class Api::V1::DogsController < ApplicationController
+  include Api::V1::DogsControllerDoc
   before_action :authenticate_and_set_user
 
   def index

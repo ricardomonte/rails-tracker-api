@@ -1,4 +1,5 @@
 class Api::V1::ExpensesController < ApplicationController
+  include Api::V1::ExpensesControllerDoc
   before_action :authenticate_and_set_user
 
   def index
@@ -14,11 +15,6 @@ class Api::V1::ExpensesController < ApplicationController
   def show
     expense = Expense.find(params[:id])
     render json: expense
-  end
-
-  def destroy
-    expense = Expense.find(params[:id])
-    expense.destroy
   end
 
   private

@@ -1,0 +1,281 @@
+{
+  "dogs#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/dogs",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": "dog[name]=tester&dog[breed]=german+shepard&dog[kilograms]=5&dog[regular_play_time]=2&dog[owner]=1",
+      "response_data": {
+        "id": 2,
+        "name": "tester",
+        "breed": "german shepard",
+        "owner": "1",
+        "created_at": "2021-05-21T22:34:13.622Z",
+        "updated_at": "2021-05-21T22:34:13.622Z",
+        "kilograms": 5,
+        "regular_play_time": null
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "dogs#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/dogs",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 1,
+          "name": "Sample Dog",
+          "breed": "Sample Breed",
+          "owner": "1",
+          "created_at": "2021-05-21T22:34:13.592Z",
+          "updated_at": "2021-05-21T22:34:13.592Z",
+          "kilograms": 12,
+          "regular_play_time": 14
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "dogs#myhours": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/dogs/5/my_hours",
+      "versions": [
+        "1.0"
+      ],
+      "query": "dog[dog_id]=5",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 1,
+          "hour": 3,
+          "play": "2021-05-18",
+          "dog_id": 5,
+          "created_at": "2021-05-21T22:34:13.661Z",
+          "updated_at": "2021-05-21T22:34:13.661Z"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "dogs#show": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/dogs/3",
+      "versions": [
+        "1.0"
+      ],
+      "query": "dog[dog_id]=3",
+      "request_data": null,
+      "response_data": {
+        "id": 3,
+        "name": "Sample Dog",
+        "breed": "Sample Breed",
+        "owner": "1",
+        "created_at": "2021-05-21T22:34:13.628Z",
+        "updated_at": "2021-05-21T22:34:13.628Z",
+        "kilograms": 12,
+        "regular_play_time": 14
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "dogs#update": [
+    {
+      "verb": "PATCH",
+      "path": "/api/v1/dogs/4",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": "dog[dog_id]=4&dog[regular_play_time]=14",
+      "response_data": {
+        "regular_play_time": 14,
+        "id": 4,
+        "name": "Sample Dog",
+        "breed": "Sample Breed",
+        "owner": "1",
+        "created_at": "2021-05-21T22:34:13.642Z",
+        "updated_at": "2021-05-21T22:34:13.642Z",
+        "kilograms": 12
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "expenses#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/expenses",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": "category=testvet&detail=testvet+for+testdog&amount=15&date_payment=2021-5-18",
+      "response_data": {
+        "id": 2,
+        "category": "testvet",
+        "detail": "testvet for testdog",
+        "amount": 15,
+        "user_id": 2,
+        "created_at": "2021-05-21T22:34:13.699Z",
+        "updated_at": "2021-05-21T22:34:13.699Z",
+        "date_payment": "2021-05-18",
+        "day_of_expense": "18",
+        "month_of_expense": "5",
+        "year_of_expense": "2021"
+      },
+      "code": 201,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "expenses#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/expenses",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 1,
+          "category": "Category example",
+          "detail": "This is an example of detail",
+          "amount": 15,
+          "user_id": 2,
+          "created_at": "2021-05-21T22:34:13.678Z",
+          "updated_at": "2021-05-21T22:34:13.678Z",
+          "date_payment": "2021-05-19",
+          "day_of_expense": "19",
+          "month_of_expense": "5",
+          "year_of_expense": "2021"
+        }
+      ],
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "expenses#show": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/expenses/3",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "id": 3,
+        "category": "Category example",
+        "detail": "This is an example of detail",
+        "amount": 15,
+        "user_id": 2,
+        "created_at": "2021-05-21T22:34:13.707Z",
+        "updated_at": "2021-05-21T22:34:13.707Z",
+        "date_payment": "2021-05-19",
+        "day_of_expense": "19",
+        "month_of_expense": "5",
+        "year_of_expense": "2021"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "playhours#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/playhours",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": "playhour[dog_id]=6&playhour[hour]=3&playhour[play]=2021-5-19&playhour[dog]=%23%3CDog%3A0x0000555cae4b9050%3E",
+      "response_data": {
+        "message": "play hour created"
+      },
+      "code": 201,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "users#profile": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/profile",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "user": {
+          "id": 4,
+          "name": "User_test",
+          "lastname": "Test"
+        },
+        "message": "token valid for user 4"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/profile",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": null,
+      "response_data": {
+        "status": "error",
+        "error": "Invalid access token"
+      },
+      "code": 401,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "users#show": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/users/1",
+      "versions": [
+
+      ],
+      "query": "user_id=1",
+      "request_data": null,
+      "response_data": {
+        "id": 1,
+        "name": "User_test",
+        "lastname": "Test"
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ]
+}

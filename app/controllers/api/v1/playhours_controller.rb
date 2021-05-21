@@ -1,4 +1,5 @@
 class Api::V1::PlayhoursController < ApplicationController
+  include Api::V1::PlayhoursControllerDoc
   before_action :authenticate_and_set_user
 
   def create
