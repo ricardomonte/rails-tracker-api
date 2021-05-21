@@ -14,7 +14,7 @@ RSpec.describe Api::V1::ExpensesController, type: :request do
 
   describe 'Post /create' do
     it 'should have status success' do
-      post "/api/v1/expenses", :params => { category: 'testvet', detail: 'testvet for testdog', amount: 15 }, :headers => @headers
+      post "/api/v1/expenses", :params => { category: 'testvet', detail: 'testvet for testdog', amount: 15, date_payment: "2021-5-18"}, :headers => @headers
       expect(response).to have_http_status(:success)
     end
   end
