@@ -14,7 +14,7 @@ RSpec.describe Api::V1::DogsController, type: :request do
 
   describe 'Post #create' do
     it 'should have status success' do
-      post "/api/v1/dogs", :params => { :dog => { name: 'tester', breed: 'german shepard', owner: '1' } }, :headers => @headers
+      post "/api/v1/dogs", :params => { :dog => { name: 'tester', breed: 'german shepard', kilograms: 5, regular_play_time: 2, owner: '1' } }, :headers => @headers
       expect(response).to have_http_status(:success)
     end
   end
