@@ -7,9 +7,12 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :dogs
+      resources :dogs do
+        get '/my_hours', to: "dogs#myhours"
+      end
       resources :users
-      resources :expenses, only: [:index, :create, :show, :destroy]
+      resources :expenses, only: [:index, :create, :show]
+      resources :playhours, only: [:create]
       get '/profile', to: "users#profile"
     end
   end
