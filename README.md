@@ -19,11 +19,11 @@
 
 ## Documentation
 
-- [Documentation](https://media.giphy.com/media/cVGrkdyh6Y4IAOLotr/giphy.gif)
+![Documentation](https://media.giphy.com/media/cVGrkdyh6Y4IAOLotr/giphy.gif)
 
-- For the documentation you can visit
+## Read the entire documentation in:
 
-- ## [Rails-Tracker-It Documentation](https://tracker-tracker-api-fp.herokuapp.com/apipie)
+ ### [Rails-Tracker-It Documentation](https://tracker-tracker-api-fp.herokuapp.com/apipie)
 
 
 
