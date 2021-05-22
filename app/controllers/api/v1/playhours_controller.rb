@@ -3,8 +3,8 @@ class Api::V1::PlayhoursController < ApplicationController
   before_action :authenticate_and_set_user
 
   def create
-    play_h = Playhour.create!(hour_params)
-    render json: {message: "play hour created"}.as_json, status: :created
+    Playhour.create!(hour_params)
+    render json: { message: 'play hour created' }.as_json, status: :created
   end
 
   private

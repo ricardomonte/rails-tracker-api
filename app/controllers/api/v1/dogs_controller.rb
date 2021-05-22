@@ -42,5 +42,4 @@ class Api::V1::DogsController < ApplicationController
   def dog_params_update
     params.require(:dog).permit(:regular_play_time, :id)
   end
-  
 end

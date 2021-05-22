@@ -7,18 +7,17 @@ RSpec.describe Api::V1::UsersController, type: :request do
   end
   describe 'GET #profile' do
     it 'should have status success' do
-      headers = { 'Authorization' => "Bearer #{@my_token[0]}"}
-      get "/api/v1/profile", :headers => headers
+      headers = { 'Authorization' => "Bearer #{@my_token[0]}" }
+      get '/api/v1/profile', headers: headers
       expect(response).to have_http_status(:success)
     end
   end
 
   describe 'GET #profile' do
     it 'should have status unauthorized' do
-      headers = { 'Authorization' => "Bearer 1544552"}
-      get "/api/v1/profile", :headers => headers
+      headers = { 'Authorization' => 'Bearer 1544552' }
+      get '/api/v1/profile', headers: headers
       expect(response).to have_http_status(:unauthorized)
     end
   end
 end
-

@@ -8,7 +8,7 @@ module Users
         create_token_and_set_header(resource, resource_name)
         data_user = {
           user: resource,
-          message:  I18n.t('api_guard.authentication.signed_in')
+          message: I18n.t('api_guard.authentication.signed_in')
         }
         render json: data_user, status: 200
         # render_success(message: I18n.t('api_guard.authentication.signed_in'))

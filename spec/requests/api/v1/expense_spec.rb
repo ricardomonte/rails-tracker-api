@@ -4,19 +4,22 @@ RSpec.describe Api::V1::ExpensesController, type: :request do
   Apipie.record('examples')
   before(:all) do
     my_token = jwt_and_refresh_token(create(:user), 'user')
-    @headers = { 'Authorization' => "Bearer #{my_token[0]}"}
+    @headers = { 'Authorization' => "Bearer #{my_token[0]}" }
   end
   describe 'GET /index' do
     it 'should have status success' do
-      expense = create(:expense)
-      get "/api/v1/expenses", :headers => @headers
+      create(:expense)
+      get '/api/v1/expenses', headers: @headers
       expect(response).to have_http_status(:success)
     end
   end
 
   describe 'Post /create' do
     it 'should have status success' do
-      post "/api/v1/expenses", :params => { category: 'testvet', detail: 'testvet for testdog', amount: 15, date_payment: "2021-5-18"}, :headers => @headers
+      post '/api/v1/expenses',
+           params: {
+             category: 'testvet', detail: 'testvet for testdog', amount: 15, date_payment: '2021-5-18'
+           }, headers: @headers
       expect(response).to have_http_status(:success)
     end
   end
@@ -24,7 +27,7 @@ RSpec.describe Api::V1::ExpensesController, type: :request do
   describe 'Get /show' do
     it 'should have status success' do
       expense = create(:expense)
-      get "/api/v1/expenses/#{expense.id}", :headers => @headers
+      get "/api/v1/expenses/#{expense.id}", headers: @headers
       expect(response).to have_http_status(:success)
     end
   end

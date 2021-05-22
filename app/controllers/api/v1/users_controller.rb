@@ -1,7 +1,7 @@
 class Api::V1::UsersController < ApplicationController
   include Api::V1::UsersControllerDoc
   before_action :authenticate_and_set_user
-  
+
   def show
     user = User.find(params[:id])
     render json: user
@@ -15,8 +15,7 @@ class Api::V1::UsersController < ApplicationController
       }
       render json: data_user.as_json
     else
-      payload = { error: 'No token provide' }
-      render json: :payload, status: :unprocessable_entity
+      render json: { error: 'No token provide' }, status: :unprocessable_entity
     end
   end
 end
