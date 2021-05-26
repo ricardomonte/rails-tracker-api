@@ -13,8 +13,8 @@
         "name": "tester",
         "breed": "german shepard",
         "owner": "1",
-        "created_at": "2021-05-26T19:17:36.368Z",
-        "updated_at": "2021-05-26T19:17:36.368Z",
+        "created_at": "2021-05-26T19:36:51.623Z",
+        "updated_at": "2021-05-26T19:36:51.623Z",
         "kilograms": 5,
         "regular_play_time": null
       },
@@ -38,8 +38,8 @@
           "name": "Sample Dog",
           "breed": "Sample Breed",
           "owner": "1",
-          "created_at": "2021-05-26T19:17:36.335Z",
-          "updated_at": "2021-05-26T19:17:36.335Z",
+          "created_at": "2021-05-26T19:36:51.591Z",
+          "updated_at": "2021-05-26T19:36:51.591Z",
           "kilograms": 12,
           "regular_play_time": 14
         }
@@ -64,8 +64,8 @@
           "hour": 3,
           "play": "2021-05-18",
           "dog_id": 5,
-          "created_at": "2021-05-26T19:17:36.406Z",
-          "updated_at": "2021-05-26T19:17:36.406Z"
+          "created_at": "2021-05-26T19:36:51.662Z",
+          "updated_at": "2021-05-26T19:36:51.662Z"
         }
       ],
       "code": 200,
@@ -87,8 +87,8 @@
         "name": "Sample Dog",
         "breed": "Sample Breed",
         "owner": "1",
-        "created_at": "2021-05-26T19:17:36.374Z",
-        "updated_at": "2021-05-26T19:17:36.374Z",
+        "created_at": "2021-05-26T19:36:51.630Z",
+        "updated_at": "2021-05-26T19:36:51.630Z",
         "kilograms": 12,
         "regular_play_time": 14
       },
@@ -112,8 +112,8 @@
         "name": "Sample Dog",
         "breed": "Sample Breed",
         "owner": "1",
-        "created_at": "2021-05-26T19:17:36.388Z",
-        "updated_at": "2021-05-26T19:17:36.388Z",
+        "created_at": "2021-05-26T19:36:51.643Z",
+        "updated_at": "2021-05-26T19:36:51.643Z",
         "kilograms": 12
       },
       "code": 200,
@@ -136,8 +136,8 @@
         "detail": "testvet for testdog",
         "amount": 15,
         "user_id": 2,
-        "created_at": "2021-05-26T19:17:36.444Z",
-        "updated_at": "2021-05-26T19:17:36.444Z",
+        "created_at": "2021-05-26T19:36:51.702Z",
+        "updated_at": "2021-05-26T19:36:51.702Z",
         "date_payment": "2021-05-18",
         "day_of_expense": "18",
         "month_of_expense": "5",
@@ -164,8 +164,8 @@
           "detail": "This is an example of detail",
           "amount": 15,
           "user_id": 2,
-          "created_at": "2021-05-26T19:17:36.425Z",
-          "updated_at": "2021-05-26T19:17:36.425Z",
+          "created_at": "2021-05-26T19:36:51.681Z",
+          "updated_at": "2021-05-26T19:36:51.681Z",
           "date_payment": "2021-05-19",
           "day_of_expense": "19",
           "month_of_expense": "5",
@@ -192,8 +192,8 @@
         "detail": "This is an example of detail",
         "amount": 15,
         "user_id": 2,
-        "created_at": "2021-05-26T19:17:36.452Z",
-        "updated_at": "2021-05-26T19:17:36.452Z",
+        "created_at": "2021-05-26T19:36:51.710Z",
+        "updated_at": "2021-05-26T19:36:51.710Z",
         "date_payment": "2021-05-19",
         "day_of_expense": "19",
         "month_of_expense": "5",
@@ -212,7 +212,7 @@
         "1.0"
       ],
       "query": null,
-      "request_data": "playhour[dog_id]=6&playhour[hour]=3&playhour[play]=2021-5-19&playhour[dog]=%23%3CDog%3A0x000055f8f045b818%3E",
+      "request_data": "playhour[dog_id]=6&playhour[hour]=3&playhour[play]=2021-5-19&playhour[dog]=%23%3CDog%3A0x0000561576e83f78%3E",
       "response_data": {
         "message": "play hour created"
       },
